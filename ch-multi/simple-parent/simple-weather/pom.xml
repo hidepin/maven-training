@@ -14,6 +14,10 @@
 
   <name>Multi Chapter Simple Weather API</name>
 
+  <properties>
+    <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss z</maven.build.timestamp.format>
+  </properties>
+
   <build>
     <pluginManagement>
       <plugins>
@@ -32,6 +36,9 @@
                 <manifest>
                   <addClasspath>true</addClasspath>
                 </manifest>
+                <manifestEntries>
+                  <Build-Time>${maven.build.timestamp}</Build-Time>
+                </manifestEntries>
               </archive>
             </configuration>
         </plugin>
