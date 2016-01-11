@@ -18,6 +18,11 @@
     </repository>
   </repositories>
 
+  <properties>
+    <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss z</maven.build.timestamp.format>
+    <buildtimestamp>${maven.build.timestamp}</buildtimestamp>
+  </properties>
+
   <artifactId>simple-webapp</artifactId>
   <packaging>war</packaging>
   <name>Multi Chapter Simple Web Application Project</name>
@@ -59,9 +64,11 @@
           </execution>
         </executions>
         <configuration>
+          <!--
           <finalName>
             ${project.name}-${project.version}-${buildNumber}-${system.build.timestamp}
           </finalName>
+          -->
           <descriptor>src/main/assembly/release.xml</descriptor>
           <appendAssemblyId>false</appendAssemblyId>
         </configuration>

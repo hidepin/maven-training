@@ -1,5 +1,5 @@
 SYS=${project.name}
 VR=${project.version}
 RV=${buildNumber}
-DATE=${system.build.timestamp}
+DATE=${buildtimestamp}
 
